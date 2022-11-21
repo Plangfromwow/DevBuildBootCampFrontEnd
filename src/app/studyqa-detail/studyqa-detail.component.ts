@@ -24,6 +24,7 @@ faCoffee = faHeart;
 
   ngOnInit(): void {}
 
+  toggle = "";
 
   saveToFav(){
     let newQ:Favoriteqa ={
@@ -34,8 +35,11 @@ faCoffee = faHeart;
     }
     
     this.FavSrv.Create((result:any)=>{
-      console.log('Set as fav')
+      console.log('Set as fav'); 
+      this.toggle = "red";
     },newQ)
   }
+
+
   
 }
